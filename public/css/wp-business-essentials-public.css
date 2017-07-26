@@ -1,0 +1,99 @@
+/*
+ * Grid
+ */
+.wpbe-items {
+    margin: 0 -1em 0 -1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpbe-item {
+    flex: 1 100%;
+    width: 100%;
+    padding: 0 1em 1.5em;
+}
+
+.wpbe-item.wpbe-columns-2,
+.wpbe-item.wpbe-columns-3,
+.wpbe-item.wpbe-columns-4,
+.wpbe-item.wpbe-columns-5,
+.wpbe-item.wpbe-columns-6 {
+    flex: 1 50%;
+    max-width: 50%;
+}
+
+.wpbe-header,
+.wpbe-content,
+.wpbe-footer {
+    margin: .5em 1em .75em;
+}
+
+.wpbe-row,
+.wpbe-block {
+    display: block;
+}
+
+.wpbe-block {
+    margin-bottom: 1em;
+}
+
+.wpbe-title {
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width: 960px) {
+
+    .wpbe-item.wpbe-columns-3 {
+        flex: 1 33.3%;
+        max-width: 33.3%;
+    }
+
+    .wpbe-item.wpbe-columns-4 {
+        flex: 1 25%;
+        max-width: 25%;
+    }
+
+    .wpbe-item.wpbe-columns-5 {
+        flex: 1 20%;
+        max-width: 20%;
+    }
+
+    .wpbe-item.wpbe-columns-6 {
+        flex: 1 16.66%;
+        max-width: 16.66%;
+    }
+}
+
+/*
+ * Image effects
+ */
+.wpbe-image-wrapper {
+    overflow: hidden;
+}
+
+.wpbe-image-wrapper.wpbe-effect-zoom > .wpbe-image {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+.wpbe-item:hover .wpbe-image-wrapper.wpbe-effect-zoom > .wpbe-image {
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
+}
+
+/*
+ * CPT: Business
+ */
+.wpbe-business {
+    display: block;
+}
+.wpbe-business.align-left {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+.wpbe-business.align-right {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
